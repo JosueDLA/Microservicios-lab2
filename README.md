@@ -1,6 +1,8 @@
 # ingenieria-software-lab2
 Laboratorio #2 del curso de Ingeniería de Software
+ 
  Alumno: Josué Ismael de León Azurdia
+ 
  Carne: 1290-15-11788
 
 ## EndPoints
@@ -15,11 +17,11 @@ Laboratorio #2 del curso de Ingeniería de Software
 - http://localhost:9002/catedraticos/registrar
 - http://localhost:9002/catedraticos/buscarTodos
 
-## Docker Containers
+## Docker
+### Docker Containers
 * josuedla/lab2-estudiantes
 * josuedla/lab2-cursos
 
-## Docker
 ### Download Docker Image
 ```sh
 > sudo docker pull josuedla/lab2-estudiantes

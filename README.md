@@ -6,12 +6,23 @@ Alumno: Josué Ismael de León Azurdia
 Carne: 1290-15-11788
 
 ## EndPoints
+### Cursos
+- http://localhost:9002/cursos/crear
+- http://localhost:9002/cursos/buscarTodos
+
+- http://localhost:9002/catedraticos/registrar
+- http://localhost:9002/catedraticos/buscarTodos
+
+### Estudiantes
+- http://localhost:9001/estudiantes/registrar
+- http://localhost:9001/estudiantes/buscarTodos
+
 
 ## Docker Containers
 * josuedla/lab2-cursos
 * josuedla/lab2-estudiantes 
 
-##Dockerfiles
+## Dockerfiles
 ### Cursos
 ```sh
 FROM openjdk:8-jre-alpine

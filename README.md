@@ -29,8 +29,12 @@ Laboratorio #2 del curso de Ingeniería de Software
 ```
 
 ### Run Docker Image 
+Run josuedla/lab2-estudiantes in port 9001
 ```sh
 > sudo docker run -p 9001:9008 josuedla/lab2-estudiantes
+```
+Run josuedla/lab2-cursos in port 9002
+```sh
 > sudo docker run -p 9002:9009 josuedla/lab2-cursos
 ```
 

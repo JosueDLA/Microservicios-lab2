@@ -1,5 +1,10 @@
 # ingenieria-software-lab2
 Laboratorio #2 del curso de Ingeniería de Software
+
+RESTful Services POST and GET for:
+- Estudiante
+- Curso
+- Catedratico
  
  Alumno: Josué Ismael de León Azurdia
  

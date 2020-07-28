@@ -1,10 +1,4 @@
-# ingenieria-software-lab2
-
- Alumno: Josué Ismael de León Azurdia
- 
- Carne: 1290-15-11788
-
-Laboratorio #2 del curso de Ingeniería de Software
+# Mircoservices for Students and Courses
 
 RESTful Services POST and GET for:
 - Estudiante

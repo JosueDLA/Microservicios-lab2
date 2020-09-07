@@ -1,37 +1,57 @@
-## Welcome to GitHub Pages
+# Mircoservices for Students and Courses
 
-You can use the [editor on GitHub](https://github.com/JosueDLA/Microservicios-lab2/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+RESTful Services POST and GET for:
+- Estudiante
+- Curso
+- Catedratico
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## EndPoints
+### Estudiantes
+- http://localhost:9001/estudiantes/registrar
+- http://localhost:9001/estudiantes/buscarTodos
 
-### Markdown
+### Cursos
+- http://localhost:9002/cursos/crear
+- http://localhost:9002/cursos/buscarTodos
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- http://localhost:9002/catedraticos/registrar
+- http://localhost:9002/catedraticos/buscarTodos
 
-```markdown
-Syntax highlighted code block
+## Docker
+### Docker Containers
+* josuedla/lab2-estudiantes
+* josuedla/lab2-cursos
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### Download Docker Image
+```sh
+> sudo docker pull josuedla/lab2-estudiantes
+> sudo docker pull josuedla/lab2-cursos
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Run Docker Image 
+Run josuedla/lab2-estudiantes in port 9001
+```sh
+> sudo docker run -p 9001:9008 josuedla/lab2-estudiantes
+```
+Run josuedla/lab2-cursos in port 9002
+```sh
+> sudo docker run -p 9002:9009 josuedla/lab2-cursos
+```
 
-### Jekyll Themes
+### Dockerfiles
+#### Estudiantes
+```sh
+FROM openjdk:8-jre-alpine
+EXPOSE 9008
+ADD estudiantes-0.0.1-SNAPSHOT.jar lab2-estudiantes.jar
+ENTRYPOINT ["java","-jar","lab2-estudiantes.jar"]
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JosueDLA/Microservicios-lab2/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### Cursos
+```sh
+FROM openjdk:8-jre-alpine
+EXPOSE 9009
+ADD cursos-0.0.1-SNAPSHOT.jar lab2-cursos.jar
+ENTRYPOINT ["java","-jar","lab2-cursos.jar"]
+```
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
